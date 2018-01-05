@@ -1,0 +1,15 @@
+{
+  "name": "mumineen_calendar_js",
+  "description": "A Hijri calendar for Dawoodi Bohra Shia Muslims (again).",
+  "author": "Murtaza Gulamali <hello@mumineencalendar.com>",
+  "license": "MIT",
+  "dependencies": {
+    "gatsby": "^1.9.145",
+    "gatsby-link": "^1.6.32",
+    "gatsby-plugin-react-helmet": "^1.0.8"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop"
+  }
+}

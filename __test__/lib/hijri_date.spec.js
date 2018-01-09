@@ -108,6 +108,26 @@ describe('HijriDate', () => {
     })
   })
 
+  describe('dayOfWeek', () => {
+    describe('when the ISO8601 calendar is being observed', () => {
+      it('expects 20th Rabi al-Aakhar 1432H to be on Friday', () => {
+        let date = new HijriDate(1432, 3, 20)
+        let dayOfWeek = 4 // first day of the week is Monday
+
+        expect(date.dayOfWeek(true)).toBe(dayOfWeek)
+      })
+    })
+
+    describe('when the ISO8601 calendar is not being observed', () => {
+      it('expects 20th Rabi al-Aakhar 1432H to be on Friday', () => {
+        let date = new HijriDate(1432, 3, 20)
+        let dayOfWeek = 5 // first day of the week is Sunday
+
+        expect(date.dayOfWeek()).toBe(dayOfWeek)
+      })
+    })
+  })
+
   describe('fromAJD', () => {
     it('expects AJD 2455645.5 to be 20th Rabi al-Aakhar 1432H', () => {
       let date = new HijriDate(1432, 3, 20)

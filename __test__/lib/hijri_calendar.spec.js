@@ -2,28 +2,6 @@ import HijriCalendar from 'hijri_calendar'
 import HijriDate from 'hijri_date'
 
 describe('HijriCalendar', () => {
-  describe('dayOfWeek', () => {
-    describe('when the first day of the week is Sunday', () => {
-      it('expects 20th Rabi al-Aakhar 1432H to be on Friday', () => {
-        let calendar = new HijriCalendar(1432, 3)
-        let date = 20
-        let dayOfWeek = 5
-
-        expect(calendar.dayOfWeek(date)).toBe(dayOfWeek)
-      })
-    })
-
-    describe('when the first day of the week is Monday', () => {
-      it('expects 20th Rabi al-Aakhar 1432H to be on Friday', () => {
-        let calendar = new HijriCalendar(1432, 3, true)
-        let date = 20
-        let dayOfWeek = 4
-
-        expect(calendar.dayOfWeek(date)).toBe(dayOfWeek)
-      })
-    })
-  })
-
   describe('weeks', () => {
     it('expects to return an array', () => {
       let calendar = new HijriCalendar(1432, 3)

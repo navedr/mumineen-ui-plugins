@@ -1,0 +1,49 @@
+{
+  "name": "hijri-calendar-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index",
+  "scripts": {
+    "build": "rimraf dist/ && tsc",
+    "watch": "rimraf dist/ && tsc --watch",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\"",
+    "update:version": "npm version minor --no-git-tag-version",
+    "prepub:npm": "npm run format && npm run build && npm run update:version",
+    "publish:npm": "npm run prepub:npm && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navedr/mumineen_calendar_react.git"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "keywords": [],
+  "author": "Naved Rangwala",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "prettier": "^2.2.1",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "rimraf": "^3.0.2",
+    "typescript": "*"
+  },
+  "peerDependencies": {
+    "@types/react": ">=16.14.8",
+    "react": ">=16.14.0",
+    "react-dom": ">=16.14.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/navedr/mumineen_calendar_react/issues"
+  },
+  "homepage": "https://github.com/navedr/mumineen_calendar_reacthijri-calendar#readme",
+  "dependencies": {
+    "lazy.js": "^0.5.1"
+  }
+}

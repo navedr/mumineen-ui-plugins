@@ -1,9 +1,0 @@
-#!/bin/sh
-
-set -e
-
-STYLESHEET_DIR=source/assets/stylesheets
-
-(cd "$STYLESHEET_DIR"; bourbon install; neat install)
-
-middleman build --verbose

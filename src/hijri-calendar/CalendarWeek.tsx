@@ -1,10 +1,11 @@
 import * as React from "react";
 import { CalendarDay } from "./CalendarDay";
 import { MiqaatMonth } from "./HijriCalender.interface";
+import { Day } from "./libs/HijriCalendar";
 
 export const CalendarWeek: React.FC<{
     today: any;
-    onDayClick: (day) => void;
+    onDayClick: (day: Day) => void;
     miqaats?: MiqaatMonth[];
     week: any[];
 }> = React.memo(({ today, onDayClick, miqaats, week }) => {

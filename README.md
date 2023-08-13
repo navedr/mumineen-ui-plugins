@@ -1,62 +1,41 @@
-# Mumineen Calendar
+# Mumineen UI Plugins
 
 ## Introduction
 
-Mumineen Calendar is a [Hijri calendar] for [Dawoodi Bohra Shia Muslims] who
-follow the 53rd Dai al-Mutlaq, His Holiness, [Syedna Aale Qadr Mufaddal
-Saifuddin] (_TUS_). It provides the user with the Hijri date, [Gregorian date]
-for any day of the calendar year.
+Mumineen UI Plugins is a react library which features some of the commonly used UI plugins
+for [Dawoodi Bohra Shia Muslims] who follow the 53rd Dai al-Mutlaq, His Holiness, [Syedna Aale Qadr Mufaddal
+Saifuddin] (_TUS_).
 
-This version is primarily written in JavaScript using [React] and [Middleman].
-It supercedes the [Ruby on Rails version] I wrote some time ago.
-
-[Dawoodi Bohra Shia Muslims]: https://www.thedawoodibohras.com/
-[Gregorian date]: http://en.wikipedia.org/wiki/Gregorian_calendar
-[Hijri Calendar]: http://en.wikipedia.org/wiki/Islamic_calendar
-[Middleman]: http://middlemanapp.com/
-[React]: http://facebook.github.io/react/
-[Ruby on Rails version]: https://github.com/mygulamali/mumineen_calendar
-[Syedna Aale Qadr Mufaddal Saifuddin]: https://www.thedawoodibohras.com/about-the-bohras/the-dai-al-mutlaq/53rd-dai-al-mutlaq/
-
-## Setup
-
+## Installation
 ```shell
-git clone git@github.com:mygulamali/mumineen_calendar_js
-cd mumineen_calendar_js
-bundle install
-cp .env.example .env
-cd source/assets/stylesheets
-bundle exec bourbon install
-bundle exec neat install
+npm install mumineen-ui-plugins
+```
+or
+```shell
+yarn add mumineen-ui-plugins
 ```
 
-Then complete the variables in the `.env` file for you environment.  The current
-values can be found in the _Build & deploy_ section under the _Site settings_
-tab for the website, on Netlify.
+This package only contains one UI plugin which is the [Hijri Calendar] but there will be more plugins added in the future.
 
-## Serve on your localhost
+## Hijri Calendar
+### Usage
+```typescript
+import { HijriCalendar } from 'mumineen-ui-plugins';
 
-`bundle exec middleman`
-
-Then visit `http://localhost:4567` to see the site in action.
-
-## Deploy to your web server
-
-`bundle exec middleman deploy`
-
-This command will automagically commit the built website to the correct branch
-of this repo for your static site server (i.e. [GitHub Pages] or [Netlify])
-to serve.
-
-[Netlify]: https://www.netlify.com/ "Netlify"
-[GitHub Pages]: https://pages.github.com/ "GitHub Pages"
-
-## Testing
-
-After starting the local server (see above), visit
-`http://localhost:4567/jasmine` to run the [Jasmine] specs.
-
-[Jasmine]: http://jasmine.github.io/
+const App = () => {
+  return (
+    <HijriCalendar />
+  );
+}
+```
+![img.png](img.png)
+### Props
+| Name | Type       | Default     | Description                                                            |
+| --- |------------|-------------|------------------------------------------------------------------------|
+| `miqaats` | `MiqaatMonth[]` | `[]`        | List of miqaats to be displayed on the calendar.                       |
+| `additionalDayContent` | `(day: Day) => React.ReactNode` | `undefined` | Callback function to return additional content in the modal for a day. |
+| `onDayClick` | `(day: Day) => void` | `undefined` | Callback function to be called when a day is clicked.                  |
+| `showDefaultMiqaatData` | `boolean` | `false`      | Whether to show the default miqaat data (embedded in library).         |
 
 ## License
 
@@ -64,3 +43,10 @@ This software is released under the terms and conditions of [The MIT License].
 Please see the `LICENSE.txt` file for more details.
 
 [The MIT License]: http://www.opensource.org/licenses/mit-license.php
+[Dawoodi Bohra Shia Muslims]: https://www.thedawoodibohras.com/
+[Gregorian date]: http://en.wikipedia.org/wiki/Gregorian_calendar
+[Hijri Calendar]: http://en.wikipedia.org/wiki/Islamic_calendar
+[Middleman]: http://middlemanapp.com/
+[React]: http://facebook.github.io/react/
+[Ruby on Rails version]: https://github.com/mygulamali/mumineen_calendar
+[Syedna Aale Qadr Mufaddal Saifuddin]: https://www.thedawoodibohras.com/about-the-bohras/the-dai-al-mutlaq/53rd-dai-al-mutlaq/

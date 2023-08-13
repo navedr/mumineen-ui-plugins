@@ -1,8 +1,23 @@
 import { HijriDate } from "./HijriDate";
-import Lazy from "lazy.js";
 
 const MIN_CALENDAR_YEAR = 1000;
 const MAX_CALENDAR_YEAR = 3000;
+
+const range = (n: number) => Array.from(Array(n).keys());
+const repeat = (value: any, count: number) => range(count).map(() => value);
+const concat = (...arrays: any[]) =>
+    arrays.reduce((acc, curr) => {
+        acc.push(...curr);
+        return acc;
+    }, []);
+
+Object.defineProperty(Array.prototype, "chunk", {
+    value: function (chunkSize: number) {
+        var R = [];
+        for (var i = 0; i < this.length; i += chunkSize) R.push(this.slice(i, i + chunkSize));
+        return R;
+    },
+});
 
 export type Day = {
     hijri: {
@@ -20,7 +35,7 @@ export type Day = {
 };
 
 export class HijriCalendar {
-    constructor(private year, private month, private iso8601 = false) {}
+    constructor(private year: number, private month: number, private iso8601 = false) {}
 
     public getYear() {
         return this.year;
@@ -52,16 +67,16 @@ export class HijriCalendar {
     // return array of days of this month and year
     public days() {
         const self = this;
-        return Lazy.generate(function (day) {
+        return range(HijriDate.daysInMonth(this.year, this.month)).map(function (day) {
             var hijriDate = new HijriDate(self.year, self.month, day + 1),
                 gregorianDate = hijriDate.toGregorian();
             return self.dayHash(hijriDate, gregorianDate);
-        }, HijriDate.daysInMonth(this.year, this.month));
+        });
     }
 
     // return array of weeks for this month and year
     public weeks() {
-        return Lazy([]).concat(this.previousDays(), this.days(), this.nextDays()).chunk(7).toArray();
+        return concat(this.previousDays(), this.days(), this.nextDays()).chunk(7);
     }
 
     // return array of days from beginning of week until start of this month and year
@@ -70,9 +85,9 @@ export class HijriCalendar {
             daysInPreviousMonth = HijriDate.daysInMonth(previousMonth.getYear(), previousMonth.getMonth()),
             dayAtStartOfMonth = this.dayOfWeek(1);
 
-        if (this.month === 0 && this.year === MIN_CALENDAR_YEAR) return Lazy.repeat(null, 6 - dayAtStartOfMonth);
+        if (this.month === 0 && this.year === MIN_CALENDAR_YEAR) return repeat(null, 6 - dayAtStartOfMonth);
         const self = this;
-        return Lazy.generate(function (day) {
+        return range(dayAtStartOfMonth).map(function (day) {
             const hijriDate = new HijriDate(
                     previousMonth.getYear(),
                     previousMonth.getMonth(),
@@ -80,7 +95,7 @@ export class HijriCalendar {
                 ),
                 gregorianDate = hijriDate.toGregorian();
             return self.dayHash(hijriDate, gregorianDate, true);
-        }, dayAtStartOfMonth);
+        });
     }
 
     // return array of days from end of this month and year until end of the week
@@ -90,13 +105,13 @@ export class HijriCalendar {
             dayAtEndOfMonth = this.dayOfWeek(daysInMonth);
 
         if (nextMonth.getYear() === this.year && nextMonth.getMonth() === this.month)
-            return Lazy.repeat(null, 6 - dayAtEndOfMonth);
+            return repeat(null, 6 - dayAtEndOfMonth);
         const self = this;
-        return Lazy.generate(function (day) {
+        return range(6 - dayAtEndOfMonth).map(function (day) {
             var hijriDate = new HijriDate(nextMonth.getYear(), nextMonth.getMonth(), day + 1),
                 gregorianDate = hijriDate.toGregorian();
             return self.dayHash(hijriDate, gregorianDate, true);
-        }, 6 - dayAtEndOfMonth);
+        });
     }
 
     // return Hijri Calendar object for the previous month

@@ -7,7 +7,7 @@ export interface MiqaatMonth {
 export interface Miqaat {
     title: string;
     description?: string;
-    phase: string;
+    phase: "day" | "night";
     priority: number;
     year?: number;
 }

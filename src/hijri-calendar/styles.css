@@ -1,82 +1,67 @@
 @font-face {
-    font-family: "icomoon";
-    src: url("./fonts/icomoon.eot");
-    src: url("./fonts/icomoon.eot?#iefix")
-    format("embedded-opentype"), url("./fonts/icomoon.ttf")
-    format("truetype"), url("./fonts/icomoon.woff")
-    format("woff"), url("./fonts/icomoon.svg#icomoon")
-    format("svg");
+    font-family: 'icomoon';
+    src: url('./fonts/icomoon.eot');
+    src: url('./fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/icomoon.ttf') format('truetype'),
+    url('./fonts/icomoon.woff') format('woff'),
+    url('./fonts/icomoon.svg#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
-/* line 9, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_fonts.sass */
-[class^="icon-"], [class*=" icon-"] {
-    font-family: "icomoon";
+
+.hijri-calendar [class^='icon-'],
+.hijri-calendar [class*=' icon-'] {
+    font-family: 'icomoon';
     speak: none;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-    /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 23, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_fonts.sass */
-.icon-chevron-sign-right:before {
-    content: "";
+.hijri-calendar .icon-chevron-sign-right:before {
+    content: '';
 }
 
-/* line 26, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_fonts.sass */
-.icon-chevron-sign-left:before {
-    content: "";
+.hijri-calendar .icon-chevron-sign-left:before {
+    content: '';
 }
 
-/* line 29, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_fonts.sass */
-.icon-plus-sign:before {
-    content: "";
+.hijri-calendar .icon-plus-sign:before {
+    content: '';
 }
 
-/* line 32, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_fonts.sass */
-.icon-minus-sign:before {
-    content: "";
+.hijri-calendar .icon-minus-sign:before {
+    content: '';
 }
 
-/* line 35, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_fonts.sass */
-.icon-sun:before {
-    content: "";
+.hijri-calendar .icon-sun:before {
+    content: '';
 }
 
-/* line 38, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_fonts.sass */
-.icon-moon:before {
-    content: "";
+.hijri-calendar .icon-moon:before {
+    content: '';
 }
 
-/* line 41, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_fonts.sass */
-.icon-circle:before {
-    content: "";
+.hijri-calendar .icon-circle:before {
+    content: '';
 }
 
-/* line 44, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_fonts.sass */
-.icon-remove-sign:before {
-    content: "";
+.hijri-calendar .icon-remove-sign:before {
+    content: '';
 }
 
-/* line 47, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_fonts.sass */
-.icon-MIT:before {
-    content: "";
+.hijri-calendar .icon-MIT:before {
+    content: '';
 }
 
-/* Bitters 0.10.0
- * http://bitters.bourbon.io
- * Copyright 2013–2014 thoughtbot, inc.
- * MIT License */
-/* line 1, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/extends/_button.scss */
-button,
-input[type="submit"] {
+.hijri-calendar button,
+.hijri-calendar input[type='submit'] {
     -webkit-font-smoothing: antialiased;
-    background-color: #477DCA;
+    background-color: #477dca;
     border-radius: 3px;
     color: white;
     display: inline-block;
@@ -87,160 +72,150 @@ input[type="submit"] {
     text-decoration: none;
 }
 
-/* line 13, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/extends/_button.scss */
-button:hover,
-input[type="submit"]:hover {
+.hijri-calendar button:hover,
+.hijri-calendar input[type='submit']:hover {
     background-color: #2c5999;
     color: white;
 }
 
-/* line 18, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/extends/_button.scss */
-button:disabled,
-input[type="submit"]:disabled {
+.hijri-calendar button:disabled,
+.hijri-calendar input[type='submit']:disabled {
     cursor: not-allowed;
     opacity: 0.5;
 }
 
-/* line 10, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_typography.scss */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+.hijri-calendar h1,
+.hijri-calendar h2,
+.hijri-calendar h3,
+.hijri-calendar h4,
+.hijri-calendar h5,
+.hijri-calendar h6 {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif;
     line-height: 1.25;
     margin: 0;
     text-rendering: optimizeLegibility;
 }
 
-/* line 22, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_typography.scss */
-h1 {
+.hijri-calendar h1 {
     font-size: 2.25em;
 }
 
-/* line 26, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_typography.scss */
-h2 {
+.hijri-calendar h2 {
     font-size: 2em;
 }
 
-/* line 30, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_typography.scss */
-h3 {
+.hijri-calendar h3 {
     font-size: 1.75em;
 }
 
-/* line 34, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_typography.scss */
-h4 {
+.hijri-calendar h4 {
     font-size: 1.5em;
 }
 
-/* line 38, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_typography.scss */
-h5 {
+.hijri-calendar h5 {
     font-size: 1.25em;
 }
 
-/* line 42, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_typography.scss */
-h6 {
+.hijri-calendar h6 {
     font-size: 1em;
 }
 
-/* line 46, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_typography.scss */
-p {
+.hijri-calendar p {
     margin: 0 0 0.75em;
 }
 
-/* line 50, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_typography.scss */
-a {
+.hijri-calendar a {
     -webkit-transition: color 0.1s linear;
     -moz-transition: color 0.1s linear;
     transition: color 0.1s linear;
-    color: #477DCA;
+    color: #477dca;
     text-decoration: none;
 }
 
-/* line 55, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_typography.scss */
-a:hover {
+.hijri-calendar a:hover {
     color: #2c5999;
 }
 
-/* line 59, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_typography.scss */
-a:active, a:focus {
+.hijri-calendar a:active,
+.hijri-calendar a:focus {
     color: #2c5999;
     outline: none;
 }
 
-/* line 65, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_typography.scss */
-hr {
-    border-bottom: 1px solid #DDD;
+.hijri-calendar hr {
+    border-bottom: 1px solid #ddd;
     border-left: none;
     border-right: none;
     border-top: none;
     margin: 1.5em 0;
 }
 
-/* line 73, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_typography.scss */
-img,
-picture {
+.hijri-calendar img,
+.hijri-calendar picture {
     margin: 0;
     max-width: 100%;
 }
 
-/* line 79, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_typography.scss */
-blockquote {
-    border-left: 2px solid #DDD;
+.hijri-calendar blockquote {
+    border-left: 2px solid #ddd;
     color: #595959;
     margin: 1.5em 0;
     padding-left: 0.75em;
 }
 
-/* line 86, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_typography.scss */
-cite {
+.hijri-calendar cite {
     color: #737373;
     font-style: italic;
 }
 
-/* line 90, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_typography.scss */
-cite:before {
-    content: "\2014 \00A0";
+.hijri-calendar cite:before {
+    content: '\2014 \00A0';
 }
 
-/* line 1, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_forms.scss */
-fieldset {
+.hijri-calendar fieldset {
     background: #f7f7f7;
-    border: 1px solid #DDD;
+    border: 1px solid #ddd;
     margin: 0 0 0.75em 0;
     padding: 1.5em;
 }
 
-/* line 8, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_forms.scss */
-input,
-label,
-select {
+.hijri-calendar input,
+.hijri-calendar label,
+.hijri-calendar select {
     display: block;
-    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif;
     font-size: 1em;
 }
 
-/* line 16, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_forms.scss */
-label {
+.hijri-calendar label {
     font-weight: bold;
     margin-bottom: 0.375em;
 }
 
-/* line 20, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_forms.scss */
-label.required:after {
-    content: "*";
+.hijri-calendar label.required:after {
+    content: '*';
 }
 
-/* line 24, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_forms.scss */
-label abbr {
+.hijri-calendar label abbr {
     display: none;
 }
 
-/* line 29, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_forms.scss */
-textarea,
-input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"],
-select[multiple=multiple] {
+.hijri-calendar textarea,
+.hijri-calendar input[type='email'],
+.hijri-calendar input[type='number'],
+.hijri-calendar input[type='password'],
+.hijri-calendar input[type='search'],
+.hijri-calendar input[type='tel'],
+.hijri-calendar input[type='text'],
+.hijri-calendar input[type='url'],
+.hijri-calendar input[type='color'],
+.hijri-calendar input[type='date'],
+.hijri-calendar input[type='datetime'],
+.hijri-calendar input[type='datetime-local'],
+.hijri-calendar input[type='month'],
+.hijri-calendar input[type='time'],
+.hijri-calendar input[type='week'],
+.hijri-calendar select[multiple='multiple'] {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -249,38 +224,61 @@ select[multiple=multiple] {
     transition: border-color;
     background-color: white;
     border-radius: 3px;
-    border: 1px solid #DDD;
+    border: 1px solid #ddd;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
-    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif;
     font-size: 1em;
     margin-bottom: 0.75em;
     padding: 0.5em 0.5em;
     width: 100%;
 }
 
-/* line 44, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_forms.scss */
-textarea:hover,
-input[type="email"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="url"]:hover, input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="month"]:hover, input[type="time"]:hover, input[type="week"]:hover,
-select[multiple=multiple]:hover {
+.hijri-calendar textarea:hover,
+.hijri-calendar input[type='email']:hover,
+.hijri-calendar input[type='number']:hover,
+.hijri-calendar input[type='password']:hover,
+.hijri-calendar input[type='search']:hover,
+.hijri-calendar input[type='tel']:hover,
+.hijri-calendar input[type='text']:hover,
+.hijri-calendar input[type='url']:hover,
+.hijri-calendar input[type='color']:hover,
+.hijri-calendar input[type='date']:hover,
+.hijri-calendar input[type='datetime']:hover,
+.hijri-calendar input[type='datetime-local']:hover,
+.hijri-calendar input[type='month']:hover,
+.hijri-calendar input[type='time']:hover,
+.hijri-calendar input[type='week']:hover,
+.hijri-calendar select[multiple='multiple']:hover {
     border-color: #c4c4c4;
 }
 
-/* line 48, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_forms.scss */
-textarea:focus,
-input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus,
-select[multiple=multiple]:focus {
-    border-color: #477DCA;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(55, 112, 192, 0.7);
+.hijri-calendar textarea:focus,
+.hijri-calendar input[type='email']:focus,
+.hijri-calendar input[type='number']:focus,
+.hijri-calendar input[type='password']:focus,
+.hijri-calendar input[type='search']:focus,
+.hijri-calendar input[type='tel']:focus,
+.hijri-calendar input[type='text']:focus,
+.hijri-calendar input[type='url']:focus,
+.hijri-calendar input[type='color']:focus,
+.hijri-calendar input[type='date']:focus,
+.hijri-calendar input[type='datetime']:focus,
+.hijri-calendar input[type='datetime-local']:focus,
+.hijri-calendar input[type='month']:focus,
+.hijri-calendar input[type='time']:focus,
+.hijri-calendar input[type='week']:focus,
+.hijri-calendar select[multiple='multiple']:focus {
+    border-color: #477dca;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06),
+    0 0 5px rgba(55, 112, 192, 0.7);
     outline: none;
 }
 
-/* line 55, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_forms.scss */
-textarea {
+.hijri-calendar textarea {
     resize: vertical;
 }
 
-/* line 59, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_forms.scss */
-input[type="search"] {
+.hijri-calendar input[type='search'] {
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
@@ -288,82 +286,70 @@ input[type="search"] {
     appearance: none;
 }
 
-/* line 63, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_forms.scss */
-input[type="checkbox"],
-input[type="radio"] {
+.hijri-calendar input[type='checkbox'],
+.hijri-calendar input[type='radio'] {
     display: inline;
     margin-right: 0.375em;
 }
 
-/* line 69, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_forms.scss */
-input[type="file"] {
+.hijri-calendar input[type='file'] {
     padding-bottom: 0.75em;
     width: 100%;
 }
 
-/* line 74, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_forms.scss */
-select {
+.hijri-calendar select {
     margin-bottom: 1.5em;
     max-width: 100%;
     width: auto;
 }
 
-/* line 1, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_tables.scss */
-table {
+.hijri-calendar table {
     border-collapse: collapse;
     margin: 0.75em 0;
     table-layout: fixed;
     width: 100%;
 }
 
-/* line 8, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_tables.scss */
-th {
+.hijri-calendar th {
     border-bottom: 1px solid #b7b7b7;
     font-weight: bold;
     padding: 0.75em 0;
     text-align: left;
 }
 
-/* line 15, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_tables.scss */
-td {
-    border-bottom: 1px solid #DDD;
+.hijri-calendar td {
+    border-bottom: 1px solid #ddd;
     padding: 0.75em 0;
 }
 
-/* line 20, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_tables.scss */
-tr,
-td,
-th {
+.hijri-calendar tr,
+.hijri-calendar td,
+.hijri-calendar th {
     vertical-align: middle;
 }
 
-/* line 1, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_lists.scss */
-ul,
-ol {
+.hijri-calendar ul,
+.hijri-calendar ol {
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
-/* line 20, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_lists.scss */
-dl {
+.hijri-calendar dl {
     margin-bottom: 0.75em;
 }
 
-/* line 23, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_lists.scss */
-dl dt {
+.hijri-calendar dl dt {
     font-weight: bold;
     margin-top: 0.75em;
 }
 
-/* line 28, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_lists.scss */
-dl dd {
+.hijri-calendar dl dd {
     margin: 0;
 }
 
-/* line 1, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/base/_buttons.scss */
-button,
-input[type="submit"] {
+.hijri-calendar button,
+.hijri-calendar input[type='submit'] {
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
@@ -376,43 +362,39 @@ input[type="submit"] {
     white-space: nowrap;
 }
 
-/* line 4, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/neat/grid/_box-sizing.scss */
-html {
+.hijri-calendar {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-/* line 9, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/neat/grid/_box-sizing.scss */
-*, *:before, *:after {
+.hijri-calendar *,
+.hijri-calendar *:before,
+.hijri-calendar *:after {
     -webkit-box-sizing: inherit;
     -moz-box-sizing: inherit;
     box-sizing: inherit;
 }
 
-/* line 1, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_main.sass */
-main {
+.hijri-calendar main {
     max-width: 60em;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* line 9, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/bourbon/addons/_clearfix.scss */
-main::after {
+.hijri-calendar main::after {
     clear: both;
-    content: "";
+    content: '';
     display: table;
 }
 
-/* line 9, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/bourbon/addons/_clearfix.scss */
-main::after {
+.hijri-calendar main::after {
     clear: both;
-    content: "";
+    content: '';
     display: table;
 }
 
-/* line 1, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_year-row.sass */
-.year-row {
+.hijri-calendar .year-row {
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -422,51 +404,43 @@ main::after {
     text-align: center;
 }
 
-/* line 87, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/neat/grid/_span-columns.scss */
-.year-row:last-child {
+.hijri-calendar .year-row:last-child {
     margin-right: 0;
 }
 
-/* line 9, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/bourbon/addons/_clearfix.scss */
-.year-row::after {
+.hijri-calendar .year-row::after {
     clear: both;
-    content: "";
+    content: '';
     display: table;
 }
 
 @media screen and (min-width: 45em) {
-    /* line 1, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_year-row.sass */
-    .year-row {
+    .hijri-calendar .year-row {
         font-size: 1.25em;
     }
 }
 
-/* line 12, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_year-row.sass */
-.year-row .year-controls {
+.hijri-calendar .year-row .year-controls {
     display: inline-block;
     vertical-align: middle;
 }
 
-/* line 15, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_year-row.sass */
-.year-row .year-controls h2 {
+.hijri-calendar .year-row .year-controls h2 {
     display: inline-block;
     padding: 0 0.2em;
 }
 
-/* line 18, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_year-row.sass */
-.year-row .year-controls a {
+.hijri-calendar .year-row .year-controls a {
     font-size: 2em;
     line-height: 1.25em;
 }
 
-/* line 21, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_year-row.sass */
-.year-row .year-controls a:hover {
+.hijri-calendar .year-row .year-controls a:hover {
     color: #2c5999;
 }
 
 @media screen and (max-width: 30em) {
-    /* line 12, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_year-row.sass */
-    .year-row .year-controls {
+    .hijri-calendar .year-row .year-controls {
         float: left;
         display: block;
         margin-right: 2.35765%;
@@ -474,21 +448,18 @@ main::after {
         text-align: left;
     }
 
-    /* line 87, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/neat/grid/_span-columns.scss */
-    .year-row .year-controls:last-child {
+    .hijri-calendar .year-row .year-controls:last-child {
         margin-right: 0;
     }
 }
 
-/* line 29, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_year-row.sass */
-.year-row .today-button {
+.hijri-calendar .year-row .today-button {
     display: inline-block;
     vertical-align: middle;
 }
 
 @media screen and (max-width: 30em) {
-    /* line 29, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_year-row.sass */
-    .year-row .today-button {
+    .hijri-calendar .year-row .today-button {
         float: left;
         display: block;
         margin-right: 2.35765%;
@@ -497,28 +468,24 @@ main::after {
         text-align: right;
     }
 
-    /* line 87, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/neat/grid/_span-columns.scss */
-    .year-row .today-button:last-child {
+    .hijri-calendar .year-row .today-button:last-child {
         margin-right: 0;
     }
 }
 
 @media screen and (min-width: 30em) {
-    /* line 29, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_year-row.sass */
-    .year-row .today-button {
+    .hijri-calendar .year-row .today-button {
         padding-left: 1em;
     }
 }
 
 @media screen and (min-width: 45em) {
-    /* line 29, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_year-row.sass */
-    .year-row .today-button {
+    .hijri-calendar .year-row .today-button {
         padding-left: 1.25em;
     }
 }
 
-/* line 1, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_month-row.sass */
-.month-row {
+.hijri-calendar .month-row {
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -527,20 +494,17 @@ main::after {
     padding: 1em 1em 0;
 }
 
-/* line 87, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/neat/grid/_span-columns.scss */
-.month-row:last-child {
+.hijri-calendar .month-row:last-child {
     margin-right: 0;
 }
 
-/* line 9, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/bourbon/addons/_clearfix.scss */
-.month-row::after {
+.hijri-calendar .month-row::after {
     clear: both;
-    content: "";
+    content: '';
     display: table;
 }
 
-/* line 8, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_month-row.sass */
-.month-row .month-controls {
+.hijri-calendar .month-row .month-controls {
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -548,13 +512,11 @@ main::after {
     margin-right: 0;
 }
 
-/* line 87, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/neat/grid/_span-columns.scss */
-.month-row .month-controls:last-child {
+.hijri-calendar .month-row .month-controls:last-child {
     margin-right: 0;
 }
 
-/* line 11, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_month-row.sass */
-.month-row .month-controls h3 {
+.hijri-calendar .month-row .month-controls h3 {
     display: inline-block;
     font-size: 1em;
     line-height: 2.5em;
@@ -562,30 +524,26 @@ main::after {
 }
 
 @media screen and (min-width: 30em) {
-    /* line 11, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_month-row.sass */
-    .month-row .month-controls h3 {
+    .hijri-calendar .month-row .month-controls h3 {
         font-size: 1.5em;
     }
 }
 
 @media screen and (max-width: 45em) {
-    /* line 11, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_month-row.sass */
-    .month-row .month-controls h3 {
+    .hijri-calendar .month-row .month-controls h3 {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 65.88078%;
     }
 
-    /* line 87, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/neat/grid/_span-columns.scss */
-    .month-row .month-controls h3:last-child {
+    .hijri-calendar .month-row .month-controls h3:last-child {
         margin-right: 0;
     }
 }
 
 @media screen and (min-width: 45em) {
-    /* line 11, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_month-row.sass */
-    .month-row .month-controls h3 {
+    .hijri-calendar .month-row .month-controls h3 {
         float: left;
         display: block;
         margin-right: 2.35765%;
@@ -593,70 +551,59 @@ main::after {
         font-size: 1.75em;
     }
 
-    /* line 87, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/neat/grid/_span-columns.scss */
-    .month-row .month-controls h3:last-child {
+    .hijri-calendar .month-row .month-controls h3:last-child {
         margin-right: 0;
     }
 }
 
-/* line 27, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_month-row.sass */
-.month-row .month-controls a {
+.hijri-calendar .month-row .month-controls a {
     font-size: 2em;
     line-height: 1.25em;
 }
 
-/* line 30, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_month-row.sass */
-.month-row .month-controls a.next {
+.hijri-calendar .month-row .month-controls a.next {
     margin-right: 0;
 }
 
-/* line 32, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_month-row.sass */
-.month-row .month-controls a:hover {
+.hijri-calendar .month-row .month-controls a:hover {
     color: #2c5999;
 }
 
 @media screen and (max-width: 30em) {
-    /* line 36, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_month-row.sass */
-    .month-row .month-controls a.next {
+    .hijri-calendar .month-row .month-controls a.next {
         text-align: right;
     }
 }
 
 @media screen and (min-width: 30em) {
-    /* line 27, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_month-row.sass */
-    .month-row .month-controls a {
+    .hijri-calendar .month-row .month-controls a {
         line-height: 2em;
     }
 
-    /* line 41, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_month-row.sass */
-    .month-row .month-controls a.prev {
+    .hijri-calendar .month-row .month-controls a.prev {
         text-align: right;
     }
 
-    /* line 43, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_month-row.sass */
-    .month-row .month-controls a.next {
+    .hijri-calendar .month-row .month-controls a.next {
         text-align: left;
     }
 }
 
 @media screen and (max-width: 45em) {
-    /* line 27, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_month-row.sass */
-    .month-row .month-controls a {
+    .hijri-calendar .month-row .month-controls a {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 14.70196%;
     }
 
-    /* line 87, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/neat/grid/_span-columns.scss */
-    .month-row .month-controls a:last-child {
+    .hijri-calendar .month-row .month-controls a:last-child {
         margin-right: 0;
     }
 }
 
 @media screen and (min-width: 45em) {
-    /* line 27, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_month-row.sass */
-    .month-row .month-controls a {
+    .hijri-calendar .month-row .month-controls a {
         float: left;
         display: block;
         margin-right: 2.35765%;
@@ -664,14 +611,12 @@ main::after {
         font-size: 2.5em;
     }
 
-    /* line 87, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/neat/grid/_span-columns.scss */
-    .month-row .month-controls a:last-child {
+    .hijri-calendar .month-row .month-controls a:last-child {
         margin-right: 0;
     }
 }
 
-/* line 1, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_calendar.sass */
-.calendar {
+.hijri-calendar .calendar {
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -679,83 +624,70 @@ main::after {
     margin-right: 0;
 }
 
-/* line 87, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/neat/grid/_span-columns.scss */
-.calendar:last-child {
+.hijri-calendar .calendar:last-child {
     margin-right: 0;
 }
 
-/* line 9, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/bourbon/addons/_clearfix.scss */
-.calendar::after {
+.hijri-calendar .calendar::after {
     clear: both;
-    content: "";
+    content: '';
     display: table;
 }
 
-/* line 6, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_calendar.sass */
-.calendar table {
+.hijri-calendar .calendar table {
     border-collapse: collapse;
     border-spacing: 0;
     border-width: 0;
     margin: 0;
 }
 
-/* line 16, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_calendar.sass */
-.calendar table thead tr > th {
+.hijri-calendar .calendar table thead tr > th {
     width: 14.28571%;
     border: 0;
     text-align: center;
 }
 
-/* line 23, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_calendar.sass */
-.calendar table tbody tr:last-child {
-    border-bottom: 1px solid #DDD;
+.hijri-calendar .calendar table tbody tr:last-child {
+    border-bottom: 1px solid #ddd;
 }
 
-/* line 25, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_calendar.sass */
-.calendar table tbody tr td {
+.hijri-calendar .calendar table tbody tr td {
     width: 14.28571%;
-    border-top: 1px solid #DDD;
+    border-top: 1px solid #ddd;
     border-bottom: 0;
-    border-left: 1px solid #DDD;
+    border-left: 1px solid #ddd;
     border-right: 0;
 }
 
-/* line 32, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_calendar.sass */
-.calendar table tbody tr td:last-child {
-    border-right: 1px solid #DDD;
+.hijri-calendar .calendar table tbody tr td:last-child {
+    border-right: 1px solid #ddd;
 }
 
-/* line 1, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_day.sass */
-.day {
+.hijri-calendar .day {
     color: #555;
     cursor: pointer;
 }
 
-/* line 10, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_day.sass */
-.day:hover {
+.hijri-calendar .day:hover {
     background-color: #eaeaea;
     color: #000;
     cursor: pointer;
 }
 
-/* line 15, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_day.sass */
-.day.today {
+.hijri-calendar .day.today {
     background-color: #c3f393;
 }
 
-/* line 17, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_day.sass */
-.day.today:hover {
+.hijri-calendar .day.today:hover {
     background-color: #aaee65;
 }
 
-/* line 21, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_day.sass */
-.filler {
+.hijri-calendar .filler {
     color: #c4c4c4;
 }
 
-/* line 25, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_day.sass */
-.day,
-.filler {
+.hijri-calendar .day,
+.hijri-calendar .filler {
     position: relative;
     overflow: hidden;
     vertical-align: top;
@@ -763,9 +695,8 @@ main::after {
     padding: 0;
 }
 
-/* line 37, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_day.sass */
-.day .hijri,
-.filler .hijri {
+.hijri-calendar .day .hijri,
+.hijri-calendar .filler .hijri {
     position: absolute;
     top: 0;
     right: 0;
@@ -775,9 +706,8 @@ main::after {
     text-align: right;
 }
 
-/* line 46, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_day.sass */
-.day .gregorian,
-.filler .gregorian {
+.hijri-calendar .day .gregorian,
+.hijri-calendar .filler .gregorian {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -787,9 +717,8 @@ main::after {
     text-align: left;
 }
 
-/* line 55, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_day.sass */
-.day .day-icon,
-.filler .day-icon {
+.hijri-calendar .day .day-icon,
+.hijri-calendar .filler .day-icon {
     text-align: center;
     width: 100%;
     height: 100%;
@@ -797,50 +726,42 @@ main::after {
     padding: 0;
 }
 
-/* line 61, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_day.sass */
-.day .day-icon i,
-.filler .day-icon i {
+.hijri-calendar .day .day-icon i,
+.hijri-calendar .filler .day-icon i {
     font-size: 1.5rem;
     line-height: 5rem;
 }
 
-/* line 64, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_day.sass */
-.day .day-icon i.icon-sun,
-.filler .day-icon i.icon-sun {
+.hijri-calendar .day .day-icon i.icon-sun,
+.hijri-calendar .filler .day-icon i.icon-sun {
     color: orange;
 }
 
-/* line 66, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_day.sass */
-.day .day-icon i.icon-circle,
-.filler .day-icon i.icon-circle {
+.hijri-calendar .day .day-icon i.icon-circle,
+.hijri-calendar .filler .day-icon i.icon-circle {
     color: #aaa;
     font-size: 0.5rem;
 }
 
-/* line 69, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_day.sass */
-.day .day-icon i.icon-moon,
-.filler .day-icon i.icon-moon {
+.hijri-calendar .day .day-icon i.icon-moon,
+.hijri-calendar .filler .day-icon i.icon-moon {
     color: blue;
 }
 
-/* line 6, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_modal.sass */
-.day-modal input[type="checkbox"] {
+.hijri-calendar .day-modal input[type='checkbox'] {
     display: none;
 }
 
-/* line 8, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_modal.sass */
-.day-modal input[type="checkbox"]:checked + .modal-window {
+.hijri-calendar .day-modal input[type='checkbox']:checked + .modal-window {
     opacity: 1;
     visibility: visible;
 }
 
-/* line 11, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_modal.sass */
-.day-modal input[type="checkbox"]:checked + .modal-window .modal-inner {
+.hijri-calendar .day-modal input[type='checkbox']:checked + .modal-window .modal-inner {
     top: 0;
 }
 
-/* line 15, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_modal.sass */
-.day-modal .modal-window {
+.hijri-calendar .day-modal .modal-window {
     -webkit-transition: opacity 0.25s ease;
     -moz-transition: opacity 0.25s ease;
     transition: opacity 0.25s ease;
@@ -856,8 +777,7 @@ main::after {
     z-index: 100;
 }
 
-/* line 25, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_modal.sass */
-.day-modal .modal-close {
+.hijri-calendar .day-modal .modal-close {
     position: absolute;
     top: 1em;
     right: 1em;
@@ -867,8 +787,8 @@ main::after {
     background: white;
 }
 
-/* line 30, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_modal.sass */
-.day-modal .modal-close:after, .day-modal .modal-close:before {
+.hijri-calendar .day-modal .modal-close:after,
+.hijri-calendar .day-modal .modal-close:before {
     position: absolute;
     top: 3px;
     right: 3px;
@@ -880,19 +800,18 @@ main::after {
     transform: rotate(45deg);
     height: 1.5em;
     width: 0.15em;
-    background: #DDD;
-    content: "";
+    background: #ddd;
+    content: '';
     display: block;
     margin: -3px 0 0 -1px;
 }
 
-/* line 39, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_modal.sass */
-.day-modal .modal-close:hover:after, .day-modal .modal-close:hover:before {
+.hijri-calendar .day-modal .modal-close:hover:after,
+.hijri-calendar .day-modal .modal-close:hover:before {
     background: #c4c4c4;
 }
 
-/* line 42, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_modal.sass */
-.day-modal .modal-close:before {
+.hijri-calendar .day-modal .modal-close:before {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
@@ -900,8 +819,7 @@ main::after {
     transform: rotate(-45deg);
 }
 
-/* line 46, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_modal.sass */
-.day-modal .modal-inner {
+.hijri-calendar .day-modal .modal-inner {
     -webkit-transition: opacity 0.25s ease;
     -moz-transition: opacity 0.25s ease;
     transition: opacity 0.25s ease;
@@ -923,8 +841,7 @@ main::after {
 }
 
 @media screen and (min-width: 30em) {
-    /* line 46, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_modal.sass */
-    .day-modal .modal-inner {
+    .hijri-calendar .day-modal .modal-inner {
         -webkit-transform: translate(-50%, 10%);
         -moz-transform: translate(-50%, 10%);
         -ms-transform: translate(-50%, 10%);
@@ -937,8 +854,7 @@ main::after {
 }
 
 @media screen and (min-width: 45em) {
-    /* line 46, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_modal.sass */
-    .day-modal .modal-inner {
+    .hijri-calendar .day-modal .modal-inner {
         -webkit-transform: translate(-50%, 50%);
         -moz-transform: translate(-50%, 50%);
         -ms-transform: translate(-50%, 50%);
@@ -950,67 +866,57 @@ main::after {
     }
 }
 
-/* line 70, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_modal.sass */
-.day-modal .modal-inner h3 {
+.hijri-calendar .day-modal .modal-inner h3 {
     margin-top: 2em;
     font-size: 1em;
 }
 
 @media screen and (min-width: 30em) {
-    /* line 70, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_modal.sass */
-    .day-modal .modal-inner h3 {
+    .hijri-calendar .day-modal .modal-inner h3 {
         margin-top: 0.5em;
         font-size: 1.5em;
     }
 }
 
 @media screen and (min-width: 45em) {
-    /* line 70, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_modal.sass */
-    .day-modal .modal-inner h3 {
+    .hijri-calendar .day-modal .modal-inner h3 {
         font-size: 1.75em;
     }
 }
 
-/* line 82, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_modal.sass */
-.day-modal .modal-inner h4 {
+.hijri-calendar .day-modal .modal-inner h4 {
     font-size: 1em;
     font-weight: normal;
 }
 
 @media screen and (min-width: 30em) {
-    /* line 82, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_modal.sass */
-    .day-modal .modal-inner h4 {
+    .hijri-calendar .day-modal .modal-inner h4 {
         font-size: 1.5em;
     }
 }
 
 @media screen and (min-width: 45em) {
-    /* line 82, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_modal.sass */
-    .day-modal .modal-inner h4 {
+    .hijri-calendar .day-modal .modal-inner h4 {
         font-size: 1.75em;
     }
 }
 
-/* line 1, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_miqaat-list.sass */
-.miqaat-list {
+.hijri-calendar .miqaat-list {
     margin: 1em;
 }
 
-/* line 4, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_miqaat-list.sass */
-.miqaat-list ul.miqaats {
+.hijri-calendar .miqaat-list ul.miqaats {
     list-style-type: square;
     text-align: left;
 }
 
-/* line 8, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_miqaat-list.sass */
-.miqaat-list ul.miqaats li.none,
-.miqaat-list ul.miqaats li.error {
+.hijri-calendar .miqaat-list ul.miqaats li.none,
+.hijri-calendar .miqaat-list ul.miqaats li.error {
     list-style-type: none;
     text-align: center;
 }
 
-/* line 13, /Users/narangwa/Downloads/mumineen_calendar_js/source/assets/stylesheets/_miqaat-list.sass */
-.miqaat-list ul.miqaats .description {
+.hijri-calendar .miqaat-list ul.miqaats .description {
     font-size: 0.9em;
     font-style: italic;
 }

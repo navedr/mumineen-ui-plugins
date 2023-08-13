@@ -5,7 +5,7 @@ import { DateUtil } from "./libs/date";
 import { classSet } from "./libs/classSet";
 import { Day } from "./libs/HijriCalendar";
 
-export const CalendarDay: React.FC<{ today: any; onDayClick: (day) => void; day: Day; miqaats?: MiqaatMonth[] }> =
+export const CalendarDay: React.FC<{ today: any; onDayClick: (day: Day) => void; day: Day; miqaats?: MiqaatMonth[] }> =
     React.memo(({ today, onDayClick, day, miqaats }) => {
         const isToday = React.useMemo(
             () =>

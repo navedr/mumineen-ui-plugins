@@ -1,7 +1,5 @@
 # Mumineen UI Plugins
 
-## Introduction
-
 Mumineen UI Plugins is a react library which features some of the commonly used UI plugins
 for [Dawoodi Bohra Shia Muslims] who follow the 53rd Dai al-Mutlaq, His Holiness, [Syedna Aale Qadr Mufaddal
 Saifuddin] (_TUS_).

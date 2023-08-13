@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/navedr/mumineen_calendar_react.git"
+    "url": "git+https://github.com/navedr/mumineen-ui-plugins"
   },
   "files": [
     "dist/**/*"

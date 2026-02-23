@@ -1,0 +1,1261 @@
+/* ═══════════════════════════════════════
+   Qasr Prayer Calculator - Scoped Styles
+   ═══════════════════════════════════════ */
+
+.qasr-namaaz {
+    --bg: #ffffff;
+    --bg-card: #f4f6f9;
+    --bg-hover: #edf0f5;
+    --bg-input: #ffffff;
+    --text: #0d1b2a;
+    --text-dim: #4a5568;
+    --gold: #a07830;
+    --gold-light: #c9a84c;
+    --gold-faint: rgba(160, 120, 48, 0.08);
+    --full: #1e3a5f;
+    --full-faint: rgba(30, 58, 95, 0.06);
+    --full-border: rgba(30, 58, 95, 0.15);
+    --qasr: #9f5850;
+    --qasr-faint: rgba(159, 88, 80, 0.06);
+    --qasr-border: rgba(159, 88, 80, 0.15);
+    --grey: #64748b;
+    --grey-light: #94a3b8;
+    --border: rgba(160, 120, 48, 0.18);
+    --shadow: rgba(0, 0, 0, 0.07);
+    --radius: 16px;
+    font-family: "DM Sans", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.qasr-namaaz * {
+    box-sizing: border-box;
+}
+
+.qasr-namaaz .qasr-container {
+    width: 100%;
+    max-width: 680px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ── App header ── */
+.qasr-namaaz .app-header {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.qasr-namaaz .app-header .ornament {
+    display: block;
+    font-size: 26px;
+    color: var(--gold);
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+}
+
+.qasr-namaaz .app-header h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+}
+
+.qasr-namaaz .app-header h1 em {
+    font-style: normal;
+    color: var(--gold);
+}
+
+.qasr-namaaz .app-header .sub {
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--text-dim);
+    font-weight: 300;
+    letter-spacing: 0.4px;
+}
+
+.qasr-namaaz .app-header .ver {
+    font-size: 10px;
+    color: var(--gold);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.65;
+    margin-top: 4px;
+}
+
+.qasr-namaaz .divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 180px;
+    margin: 14px auto 0;
+}
+
+.qasr-namaaz .divider::before,
+.qasr-namaaz .divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.35;
+}
+
+.qasr-namaaz .divider i {
+    width: 5px;
+    height: 5px;
+    background: var(--gold);
+    transform: rotate(45deg);
+    opacity: 0.65;
+}
+
+/* ── Input card ── */
+.qasr-namaaz .input-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 24px var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.qasr-namaaz .card-lbl {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 18px;
+}
+
+.qasr-namaaz .igroup {
+    margin-bottom: 18px;
+}
+
+.qasr-namaaz .igroup label {
+    display: block;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 7px;
+}
+
+.qasr-namaaz .iwrap {
+    position: relative;
+}
+
+.qasr-namaaz .iicon {
+    position: absolute;
+    left: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gold);
+    font-size: 15px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.qasr-namaaz .iwrap input {
+    width: 100%;
+    background: var(--bg-input);
+    border: 1px solid rgba(160, 120, 48, 0.22);
+    border-radius: 10px;
+    padding: 13px 13px 13px 40px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 4px var(--shadow);
+}
+
+.qasr-namaaz .iwrap input::placeholder {
+    color: rgba(74, 85, 104, 0.32);
+}
+
+.qasr-namaaz .iwrap input:focus {
+    border-color: rgba(160, 120, 48, 0.48);
+    box-shadow: 0 0 0 3px rgba(160, 120, 48, 0.07);
+}
+
+.qasr-namaaz .badge {
+    margin-top: 7px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: var(--gold);
+    background: var(--gold-faint);
+    border: 1px solid rgba(160, 120, 48, 0.18);
+    border-radius: 20px;
+    padding: 3px 10px;
+    min-height: 24px;
+    transition: opacity 0.3s;
+}
+
+.qasr-namaaz .badge.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.qasr-namaaz .calc-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    border: none;
+    border-radius: 10px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    letter-spacing: 0.4px;
+    transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+    margin-top: 6px;
+    box-shadow: 0 4px 16px rgba(160, 120, 48, 0.28);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.qasr-namaaz .calc-btn:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 22px rgba(160, 120, 48, 0.38);
+}
+
+.qasr-namaaz .calc-btn:disabled {
+    opacity: 0.38;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.qasr-namaaz .spinner {
+    width: 17px;
+    height: 17px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: qasr-spin 0.7s linear infinite;
+    display: none;
+    flex-shrink: 0;
+}
+
+.qasr-namaaz .calc-btn.loading .spinner {
+    display: block;
+}
+
+.qasr-namaaz .calc-btn.loading .btn-txt {
+    display: none;
+}
+
+@keyframes qasr-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ── Progress ── */
+.qasr-namaaz .prog-wrap {
+    display: none;
+    margin-top: 14px;
+}
+
+.qasr-namaaz .prog-wrap.on {
+    display: block;
+}
+
+.qasr-namaaz .prog-track {
+    height: 3px;
+    background: rgba(160, 120, 48, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 7px;
+}
+
+.qasr-namaaz .prog-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    border-radius: 2px;
+    transition: width 0.35s ease;
+}
+
+.qasr-namaaz .prog-lbl {
+    font-size: 11px;
+    color: var(--text-dim);
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+
+/* ── Error ── */
+.qasr-namaaz .err {
+    display: none;
+    background: rgba(239, 68, 68, 0.05);
+    border: 1px solid rgba(239, 68, 68, 0.22);
+    border-radius: 10px;
+    padding: 11px 14px;
+    font-size: 13px;
+    color: #dc2626;
+    margin-top: 14px;
+    line-height: 1.5;
+}
+
+.qasr-namaaz .err.on {
+    display: block;
+}
+
+/* ── Results header ── */
+.qasr-namaaz .results-wrap {
+    display: none;
+}
+
+.qasr-namaaz .results-wrap.on {
+    display: block;
+}
+
+.qasr-namaaz .results-hd {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.qasr-namaaz .results-hd h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.qasr-namaaz .results-ct {
+    font-size: 11px;
+    color: var(--text-dim);
+    background: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    border-radius: 20px;
+    padding: 3px 9px;
+}
+
+/* ── Route card ── */
+.qasr-namaaz .rc {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 14px;
+    overflow: hidden;
+    box-shadow: 0 3px 18px var(--shadow);
+    animation: qasr-fadeUp 0.38s ease both;
+}
+
+.qasr-namaaz .rc:nth-child(2) {
+    animation-delay: 0.08s;
+}
+
+.qasr-namaaz .rc:nth-child(3) {
+    animation-delay: 0.16s;
+}
+
+@keyframes qasr-fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.qasr-namaaz .rc-hd {
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+}
+
+.qasr-namaaz .rc-hd:hover .rc-hd-inner {
+    background: var(--bg-hover);
+}
+
+.qasr-namaaz .rc-accent {
+    width: 4px;
+    flex-shrink: 0;
+}
+
+.qasr-namaaz .rc-full .rc-accent {
+    background: var(--full);
+}
+
+.qasr-namaaz .rc-qasr .rc-accent {
+    background: var(--qasr);
+}
+
+.qasr-namaaz .rc-hd-inner {
+    flex: 1;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    transition: background 0.18s;
+}
+
+.qasr-namaaz .rc-route-id {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+}
+
+.qasr-namaaz .rc-ruling-row {
+    display: flex;
+    align-items: baseline;
+    gap: 9px;
+    margin-top: 2px;
+}
+
+.qasr-namaaz .rc-ruling-word {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.qasr-namaaz .rc-full .rc-ruling-word {
+    color: var(--full);
+}
+
+.qasr-namaaz .rc-qasr .rc-ruling-word {
+    color: var(--qasr);
+}
+
+.qasr-namaaz .rc-ruling-desc {
+    font-size: 12px;
+    color: var(--text-dim);
+    line-height: 1.35;
+}
+
+.qasr-namaaz .rc-hd-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.qasr-namaaz .rc-meta {
+    font-size: 11px;
+    color: var(--text-dim);
+    text-align: right;
+    line-height: 1.5;
+}
+
+.qasr-namaaz .rc-meta strong {
+    display: block;
+    color: var(--text);
+    font-size: 12px;
+}
+
+.qasr-namaaz .rc-chev {
+    font-size: 11px;
+    color: var(--grey-light);
+    transition: transform 0.28s;
+}
+
+.qasr-namaaz .rc-body {
+    display: none;
+}
+
+.qasr-namaaz .rc.open .rc-body {
+    display: block;
+}
+
+.qasr-namaaz .rc.open .rc-chev {
+    transform: rotate(180deg);
+}
+
+/* ── Tab bar ── */
+.qasr-namaaz .tab-bar {
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    background: var(--bg-card);
+}
+
+.qasr-namaaz .tab-btn {
+    flex: 1;
+    padding: 10px 6px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.18s;
+    margin-bottom: -1px;
+}
+
+.qasr-namaaz .tab-btn:hover {
+    color: var(--text);
+    background: var(--bg-hover);
+}
+
+.qasr-namaaz .tab-btn.on {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+    background: #fff;
+}
+
+.qasr-namaaz .tab-pane {
+    display: none;
+    padding: 20px;
+}
+
+.qasr-namaaz .tab-pane.on {
+    display: block;
+}
+
+/* ── Ruling pane ── */
+.qasr-namaaz .sec-lbl {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+}
+
+.qasr-namaaz .chain {
+    display: flex;
+    flex-direction: column;
+}
+
+.qasr-namaaz .cstep {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.qasr-namaaz .sline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 18px;
+    flex-shrink: 0;
+}
+
+.qasr-namaaz .sdot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: 2px solid var(--gold);
+    background: #fff;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.qasr-namaaz .sdot.o,
+.qasr-namaaz .sdot.d {
+    background: var(--gold);
+}
+
+.qasr-namaaz .sdot.m {
+    border-color: var(--grey-light);
+    background: transparent;
+}
+
+.qasr-namaaz .sconn {
+    width: 2px;
+    background: rgba(160, 120, 48, 0.15);
+    min-height: 24px;
+    margin: 2px 0;
+    flex: 1;
+}
+
+.qasr-namaaz .sconn.measured {
+    background: var(--qasr);
+    opacity: 0.35;
+}
+
+.qasr-namaaz .scontent {
+    padding-bottom: 15px;
+}
+
+.qasr-namaaz .scounty {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.qasr-namaaz .scounty.hc,
+.qasr-namaaz .scounty.dc {
+    color: var(--gold);
+}
+
+.qasr-namaaz .sdetail {
+    font-size: 11px;
+    color: var(--text-dim);
+    margin-top: 1px;
+    line-height: 1.4;
+}
+
+.qasr-namaaz .stag {
+    display: inline-block;
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-top: 3px;
+    font-weight: 500;
+}
+
+.qasr-namaaz .stag.home,
+.qasr-namaaz .stag.dest {
+    background: rgba(160, 120, 48, 0.09);
+    color: var(--gold);
+    border: 1px solid rgba(160, 120, 48, 0.2);
+}
+
+.qasr-namaaz .stag.pass {
+    background: rgba(100, 116, 139, 0.06);
+    color: var(--grey);
+    border: 1px solid rgba(100, 116, 139, 0.18);
+}
+
+.qasr-namaaz .dist-result {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 6px;
+    margin-bottom: 14px;
+    padding: 11px 14px;
+    border-radius: 9px;
+}
+
+.qasr-namaaz .rc-full .dist-result {
+    background: var(--full-faint);
+    border: 1px solid var(--full-border);
+}
+
+.qasr-namaaz .rc-qasr .dist-result {
+    background: var(--qasr-faint);
+    border: 1px solid var(--qasr-border);
+}
+
+.qasr-namaaz .dist-num {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.qasr-namaaz .rc-full .dist-num {
+    color: var(--full);
+}
+
+.qasr-namaaz .rc-qasr .dist-num {
+    color: var(--qasr);
+}
+
+.qasr-namaaz .dist-verdict {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.qasr-namaaz .rc-full .dist-verdict {
+    color: var(--full);
+}
+
+.qasr-namaaz .rc-qasr .dist-verdict {
+    color: var(--qasr);
+}
+
+.qasr-namaaz .dist-lbl {
+    font-size: 11px;
+    color: var(--text-dim);
+    margin-top: 1px;
+}
+
+.qasr-namaaz .rule-note {
+    padding: 11px 13px;
+    border-radius: 8px;
+    background: rgba(160, 120, 48, 0.05);
+    border: 1px solid rgba(160, 120, 48, 0.14);
+    font-size: 12px;
+    color: var(--text-dim);
+    line-height: 1.55;
+}
+
+.qasr-namaaz .rule-note strong {
+    color: var(--text);
+    font-weight: 500;
+}
+
+.qasr-namaaz .rule-n {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--gold);
+    margin-right: 4px;
+}
+
+/* ── Map pane ── */
+.qasr-namaaz .map-wrap {
+    position: relative;
+    border-radius: 11px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    margin-bottom: 14px;
+}
+
+.qasr-namaaz .map-el {
+    height: 240px;
+    display: block;
+}
+
+.qasr-namaaz .map-fs-btn {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    z-index: 600;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: rgba(255, 255, 255, 0.92);
+    color: rgba(0, 0, 0, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    font-size: 15px;
+    transition: background 0.18s;
+}
+
+.qasr-namaaz .map-fs-btn:hover {
+    background: #fff;
+}
+
+.qasr-namaaz .map-loading {
+    padding: 10px;
+    font-size: 12px;
+    color: var(--text-dim);
+}
+
+.qasr-namaaz .coord-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.qasr-namaaz .coord-box {
+    background: rgba(0, 0, 0, 0.018);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    padding: 10px 12px;
+}
+
+.qasr-namaaz .coord-lbl {
+    font-size: 9px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 4px;
+}
+
+.qasr-namaaz .coord-val {
+    font-size: 11px;
+    font-family: ui-monospace, "Courier New", monospace;
+    color: var(--text);
+    line-height: 1.5;
+    margin-bottom: 6px;
+    word-break: break-all;
+}
+
+.qasr-namaaz .coord-links {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.qasr-namaaz .vlink {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 3px 8px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: opacity 0.18s;
+    white-space: nowrap;
+}
+
+.qasr-namaaz .vlink:hover {
+    opacity: 0.72;
+}
+
+.qasr-namaaz .vlink.m {
+    background: rgba(30, 58, 95, 0.07);
+    border: 1px solid rgba(30, 58, 95, 0.2);
+    color: var(--full);
+}
+
+.qasr-namaaz .vlink.s {
+    background: rgba(5, 150, 105, 0.07);
+    border: 1px solid rgba(5, 150, 105, 0.2);
+    color: #0f6648;
+}
+
+.qasr-namaaz .vlink.r {
+    background: rgba(160, 120, 48, 0.07);
+    border: 1px solid rgba(160, 120, 48, 0.2);
+    color: var(--gold);
+}
+
+.qasr-namaaz .border-route-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 9px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    background: rgba(160, 120, 48, 0.06);
+    border: 1px solid rgba(160, 120, 48, 0.18);
+    color: var(--gold);
+    transition: opacity 0.18s;
+}
+
+.qasr-namaaz .border-route-link:hover {
+    opacity: 0.78;
+}
+
+.qasr-namaaz .dist-compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.qasr-namaaz .dist-box {
+    background: rgba(0, 0, 0, 0.018);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    padding: 11px 12px;
+    text-align: center;
+}
+
+.qasr-namaaz .dist-box-lbl {
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 5px;
+}
+
+.qasr-namaaz .dist-box-val {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.qasr-namaaz .dist-box-val.av {
+    color: var(--full);
+}
+
+.qasr-namaaz .dist-box-val.gv {
+    color: #0f6648;
+}
+
+.qasr-namaaz .dist-box-sub {
+    font-size: 10px;
+    color: var(--text-dim);
+    margin-top: 2px;
+}
+
+.qasr-namaaz .dist-note {
+    font-size: 11px;
+    color: var(--text-dim);
+    text-align: center;
+    line-height: 1.5;
+    padding: 6px 0 2px;
+}
+
+/* ── Navigate pane ── */
+.qasr-namaaz .gmaps-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    background: rgba(31, 122, 90, 0.08);
+    border: 1px solid rgba(31, 122, 90, 0.2);
+    color: #0a5c40;
+    transition: opacity 0.18s;
+    margin-top: 4px;
+}
+
+.qasr-namaaz .gmaps-btn:hover {
+    opacity: 0.8;
+}
+
+.qasr-namaaz .nav-notice {
+    font-size: 12px;
+    color: var(--text-dim);
+    line-height: 1.6;
+    background: rgba(160, 120, 48, 0.05);
+    border: 1px solid rgba(160, 120, 48, 0.14);
+    border-radius: 8px;
+    padding: 10px 13px;
+    margin-bottom: 14px;
+}
+
+.qasr-namaaz .nav-notice strong {
+    color: var(--text);
+    font-weight: 500;
+}
+
+.qasr-namaaz .nav-details {
+    background: rgba(0, 0, 0, 0.018);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 14px;
+}
+
+.qasr-namaaz .nav-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.qasr-namaaz .nav-row:last-child {
+    border-bottom: none;
+}
+
+.qasr-namaaz .nav-key {
+    font-size: 11px;
+    color: var(--text-dim);
+    flex-shrink: 0;
+    letter-spacing: 0.2px;
+}
+
+.qasr-namaaz .nav-val {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+    text-align: right;
+}
+
+.qasr-namaaz .nav-row-counties .nav-val {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--text-dim);
+}
+
+/* ── Fullscreen map ── */
+.qasr-namaaz .fs-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(11, 18, 32, 0.52);
+    backdrop-filter: blur(5px);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+}
+
+.qasr-namaaz .fs-panel {
+    width: min(1100px, 100%);
+    height: min(88vh, 880px);
+    border-radius: 16px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.qasr-namaaz .fs-bar {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px 0 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.qasr-namaaz .fs-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.qasr-namaaz .fs-close {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.03);
+    color: rgba(0, 0, 0, 0.65);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.qasr-namaaz .fs-close:hover {
+    background: rgba(0, 0, 0, 0.07);
+}
+
+.qasr-namaaz .fs-map-host {
+    flex: 1 1 auto;
+    min-height: 0;
+}
+
+.qasr-namaaz .fs-map-host .map-el {
+    height: 100% !important;
+    width: 100% !important;
+}
+
+/* ── Auto-Qasr banner ── */
+.qasr-namaaz .auto-qasr-banner {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: var(--qasr-faint);
+    border: 1px solid var(--qasr-border);
+    border-radius: 10px;
+    padding: 14px;
+    margin-bottom: 16px;
+}
+
+.qasr-namaaz .aqb-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.qasr-namaaz .aqb-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--qasr);
+    margin-bottom: 4px;
+}
+
+.qasr-namaaz .aqb-desc {
+    font-size: 12px;
+    color: var(--text-dim);
+    line-height: 1.55;
+}
+
+.qasr-namaaz .aqb-desc strong {
+    color: var(--text);
+    font-weight: 500;
+}
+
+.qasr-namaaz .auto-qasr-counties {
+    margin-bottom: 4px;
+}
+
+.qasr-namaaz .aq-journey {
+    display: flex;
+    flex-direction: column;
+}
+
+.qasr-namaaz .aq-pt {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.qasr-namaaz .aq-dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.qasr-namaaz .aq-dot.o {
+    background: var(--gold);
+    border: 2px solid var(--gold);
+}
+
+.qasr-namaaz .aq-dot.d {
+    background: var(--qasr);
+    border: 2px solid var(--qasr);
+}
+
+.qasr-namaaz .aq-line {
+    width: 2px;
+    height: 20px;
+    background: rgba(159, 88, 80, 0.25);
+    margin-left: 4px;
+}
+
+.qasr-namaaz .aq-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.qasr-namaaz .aq-tag {
+    font-size: 10px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-top: 1px;
+}
+
+/* ── PAC autocomplete (global — dropdown renders outside component) ── */
+.pac-container {
+    background: #fff !important;
+    border: 1px solid rgba(160, 120, 48, 0.18) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1) !important;
+    margin-top: 4px !important;
+    font-family: "DM Sans", sans-serif !important;
+    z-index: 100000 !important;
+}
+
+.pac-item {
+    border-color: rgba(0, 0, 0, 0.05) !important;
+    color: #4a5568 !important;
+    font-size: 13px !important;
+    padding: 10px 13px !important;
+    cursor: pointer !important;
+}
+
+.pac-item:hover,
+.pac-item-selected {
+    background: #edf0f5 !important;
+}
+
+.pac-item-query {
+    color: #0d1b2a !important;
+}
+
+.pac-icon {
+    display: none !important;
+}
+
+.pac-matched {
+    color: #a07830 !important;
+    font-weight: 500 !important;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+    .qasr-namaaz .app-header h1 {
+        font-size: 32px;
+    }
+
+    .qasr-namaaz .app-header .ornament {
+        font-size: 22px;
+        letter-spacing: 7px;
+    }
+
+    .qasr-namaaz .input-card {
+        padding: 22px 16px;
+    }
+
+    .qasr-namaaz .rc-hd-inner {
+        padding: 12px 14px;
+    }
+
+    .qasr-namaaz .rc-meta strong {
+        font-size: 11px;
+    }
+
+    .qasr-namaaz .tab-btn {
+        font-size: 9px;
+        padding: 10px 4px;
+        letter-spacing: 0.6px;
+    }
+
+    .qasr-namaaz .tab-pane {
+        padding: 16px 14px;
+    }
+
+    .qasr-namaaz .scounty {
+        font-size: 12px;
+    }
+
+    .qasr-namaaz .sdetail {
+        font-size: 10px;
+    }
+
+    .qasr-namaaz .dist-result {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        padding: 10px 12px;
+    }
+
+    .qasr-namaaz .dist-num {
+        font-size: 22px;
+    }
+
+    .qasr-namaaz .map-el {
+        height: 200px !important;
+    }
+
+    .qasr-namaaz .coord-row {
+        grid-template-columns: 1fr;
+    }
+
+    .qasr-namaaz .dist-compare {
+        grid-template-columns: 1fr;
+    }
+
+    .qasr-namaaz .border-route-link {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 360px) {
+    .qasr-namaaz .app-header h1 {
+        font-size: 26px;
+    }
+
+    .qasr-namaaz .rc-ruling-word {
+        font-size: 24px;
+    }
+
+    .qasr-namaaz .tab-btn {
+        font-size: 8px;
+        letter-spacing: 0.4px;
+    }
+
+    .qasr-namaaz .dist-num {
+        font-size: 20px;
+    }
+}

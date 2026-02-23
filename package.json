@@ -1,52 +1,51 @@
 {
-  "name": "mumineen-ui-plugins",
-  "version": "1.6.0",
-  "description": "",
-  "main": "dist/index",
-  "scripts": {
-    "copy-data": "copyfiles -u 2 \"./src/hijri-calendar/data/*\" \"./dist/hijri-calendar\"",
-    "copy-fonts": "copyfiles -u 2 \"./src/hijri-calendar/fonts/*\" \"./dist/hijri-calendar\"",
-    "copy-css": "copyfiles -u 2 \"./src/hijri-calendar/styles.css\" \"./dist/hijri-calendar\"",
-    "build": "rimraf dist/ && tsc && npm run copy-data && npm run copy-css && npm run copy-fonts",
-    "watch": "rimraf dist/ && tsc --watch",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\"",
-    "update:version": "npm version minor --no-git-tag-version",
-    "prepub:npm": "npm run format && npm run build && npm run update:version",
-    "publish:npm": "npm run prepub:npm && npm publish"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/navedr/mumineen-ui-plugins"
-  },
-  "files": [
-    "dist/**/*"
-  ],
-  "keywords": [],
-  "author": "Naved Rangwala",
-  "license": "ISC",
-  "devDependencies": {
-    "copyfiles": "^2.4.1",
-    "@types/node": "^20.4.10",
-    "@types/react": "^17.0.0",
-    "prettier": "^2.2.1",
-    "react": "^16.8.2",
-    "react-dom": "^16.8.2",
-    "rimraf": "^3.0.2",
-    "typescript": "*"
-  },
-  "peerDependencies": {
-    "@types/react": ">=16.14.8",
-    "react": ">=16.14.0",
-    "react-dom": ">=16.14.0"
-  },
-  "peerDependenciesMeta": {
-    "@types/react": {
-      "optional": true
-    }
-  },
-  "bugs": {
-    "url": "https://github.com/navedr/mumineen-ui-plugins/issues"
-  },
-  "homepage": "https://github.com/navedr/mumineen-ui-plugins#readme",
-  "dependencies": {}
+    "name": "mumineen-ui-plugins",
+    "version": "1.7.0",
+    "description": "",
+    "main": "dist/index",
+    "scripts": {
+        "copy-data": "copyfiles -u 2 \"./src/hijri-calendar/data/*\" \"./dist/hijri-calendar\"",
+        "copy-fonts": "copyfiles -u 2 \"./src/hijri-calendar/fonts/*\" \"./dist/hijri-calendar\"",
+        "copy-css": "copyfiles -u 2 \"./src/hijri-calendar/styles.css\" \"./dist/hijri-calendar\" && copyfiles -u 2 \"./src/qasr/QasrNamaaz.css\" \"./dist/qasr\"",
+        "build": "rimraf dist/ && tsc && npm run copy-data && npm run copy-css && npm run copy-fonts",
+        "watch": "rimraf dist/ && tsc --watch",
+        "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\"",
+        "update:version": "npm version minor --no-git-tag-version",
+        "prepub:npm": "npm run format && npm run build && npm run update:version",
+        "publish:npm": "npm run prepub:npm && npm publish"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/navedr/mumineen-ui-plugins"
+    },
+    "files": [
+        "dist/**/*"
+    ],
+    "keywords": [],
+    "author": "Naved Rangwala",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/node": "^20.19.33",
+        "@types/react": "^17.0.0",
+        "copyfiles": "^2.4.1",
+        "prettier": "^2.2.1",
+        "react": "^16.8.2",
+        "react-dom": "^16.8.2",
+        "rimraf": "^3.0.2",
+        "typescript": "*"
+    },
+    "peerDependencies": {
+        "@types/react": ">=16.14.8",
+        "react": ">=16.14.0",
+        "react-dom": ">=16.14.0"
+    },
+    "peerDependenciesMeta": {
+        "@types/react": {
+            "optional": true
+        }
+    },
+    "bugs": {
+        "url": "https://github.com/navedr/mumineen-ui-plugins/issues"
+    },
+    "homepage": "https://github.com/navedr/mumineen-ui-plugins#readme"
 }
